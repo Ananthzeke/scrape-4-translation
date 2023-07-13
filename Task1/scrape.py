@@ -1,8 +1,9 @@
 import requests,os,json
 from flatten_json import flatten
 from itertools import repeat
-languages=['en','ta','hi','gu','te','ur','mr','ml','kn','bn','as','pa','or','ne','doi','kok','sd','brx','mai','mni','sat','ks']
 from concurrent.futures import ThreadPoolExecutor
+languages=['en','ta','hi','gu','te','ur','mr','ml','kn','bn','as','pa','or','ne','doi','kok','sd','brx','mai','mni','sat','ks']
+
 def fetch_url(lan,dir,url='https://www.poshantracker.in/locales/en.json?v19',replacable='en'):
 
     try:
@@ -10,7 +11,7 @@ def fetch_url(lan,dir,url='https://www.poshantracker.in/locales/en.json?v19',rep
         if response.status_code >= 400:
             raise Exception(f"Unable to scrape URL. Response code: {response.status_code}")
         with open(f'{dir}/{lan}.json','w') as f:
-                json.dump(flatten(response.json()),f,indent=4)
+                json.dump(flatten(response.json()),f,indent=4) #flattening nested json
     except Timeout:
         print("Request timed out.")
     except Exception as e:
