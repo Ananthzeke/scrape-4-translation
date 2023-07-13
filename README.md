@@ -3,8 +3,9 @@
 - Calculated these scores on a sample of data, only 100 sentences due to system constraints.
 - ```IndicTrans``` model outperforms  on the translation of indic languages compared to ```mBART```.
 - Note that ```mBART``` model has a prefix in every translated sentence and these prefixes are not unique. Sometimes it generates gibberish text on the translation part.  
+## SCOREBOARD
 ### IndicTrans
-| language   |chrf score |sacrebleu score |
+| Language  |chrf score |sacrebleu score |
 |:-----------|--------:|--------:|
 | as         | 65.3188 | 38.9631 |
 | bn         | 69.1266 | 41.6014 |
@@ -19,7 +20,7 @@
 | te         | 72.2556 | 49.5169 |
 
 ### mBART 600M
-| language   |chrf score |sacrebleu score |
+| Language   |chrf score |sacrebleu score |
 |:-----------|--------:|---------:|
 | as         | 39.6185 | 25.0706  |
 | bn         | 39.4657 | 21.0113  |
