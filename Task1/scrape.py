@@ -4,7 +4,7 @@ from itertools import repeat
 languages=['en','ta','hi','gu','te','ur','mr','ml','kn','bn','as','pa','or','ne','doi','kok','sd','brx','mai','mni','sat','ks']
 from concurrent.futures import ThreadPoolExecutor
 def fetch_url(lan,dir,url='https://www.poshantracker.in/locales/en.json?v19',replacable='en'):
-   
+
     try:
         response=requests.get(url.replace(replacable,lan),timeout=3)
         if response.status_code >= 400:
@@ -16,7 +16,7 @@ def fetch_url(lan,dir,url='https://www.poshantracker.in/locales/en.json?v19',rep
     except Exception as e:
         print(str(e))
 
-
+# Writes a text file that contains matching keys from the eng.json and indic.json for creating a parallel corpora
 def matching_json(lang1,new_dir,lang2='en',json_dir='./dataset_json'):
     if not os.path.exists(new_dir):
         os.mkdir(new_dir)
