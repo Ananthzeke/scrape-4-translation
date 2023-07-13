@@ -1,4 +1,4 @@
 ### Installation
-pip install requirements.txt
+- pip install requirements.txt
 ### Scraping script
-python scrape.py
+- python scrape.py
