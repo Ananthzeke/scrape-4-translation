@@ -1,6 +1,6 @@
 # scrape-4-translation
 - Scraped data From a multilingual website and calculated  sacrebleu and chrf scores for the Translation models.
-- calculated these scores on a sample of data.
+- Calculated these scores on a sample of data, only 100 sentences due to system constraints.
 - ```IndicTrans``` model outperforms  on the translation of indic languages compared to ```mBART```.
 - Note that ```mBART``` model has a prefix in every translated sentence and these prefixes are not unique. Sometimes it generates gibberish text on the translation part.  
 ### IndicTrans
