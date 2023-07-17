@@ -6,7 +6,7 @@
 - ```mBart``` supports most of the indic languages but ```IndicTrans``` only supports 11 indic languages.
 - ```IndicTrans``` translation is close to the original english text.
 - IndicTrans inference faster than mBART inference due to less parameters in ```IndicTrans```
-- Note that ```mBART``` model has a prefix in every translated sentence and these prefixes are not unique. Sometimes it generates gibberish text on the translation part.
+- Note that ```mBART``` model has a prefix in every translated sentence and these prefixes are not unique. This can be avoided by not using HF pipelines.
 ## SCOREBOARD
 ### IndicTrans
 | language   |chrf score |   sacrebleu score |
