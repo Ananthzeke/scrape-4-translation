@@ -3,7 +3,7 @@
 - Calculated these scores on a sample of data, only 100 sentences due to system constraints.
 - ```IndicTrans``` model outperforms  on the translation of indic languages compared to ```mBART```.
 - Note that ```mBART``` model has a prefix in every translated sentence and these prefixes are not unique. Sometimes it generates gibberish text on the translation part.
-- Huggin Face ```mBART``` supports inference on GPU with simple device parameter, this makes it faster with batch processing.
+- Both ```mBART``` and ```IndicTrans``` has a GPU support but IndicTrans lacks documentation on managing devices. 
 ## SCOREBOARD
 ### IndicTrans
 | Language  |chrf score |sacrebleu score |
