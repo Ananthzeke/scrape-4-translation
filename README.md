@@ -1,6 +1,5 @@
 # scrape-4-translation
 - Scraped data From a multilingual website and calculated  sacrebleu and chrf scores for the Translation models.
-- Calculated these scores on a sample of data, only 100 sentences due to system constraints.
 - ```IndicTrans``` model outperforms  on the translation of indic languages compared to ```mBART```.
 - Note that ```mBART``` model has a prefix in every translated sentence and these prefixes are not unique. Sometimes it generates gibberish text on the translation part.
 - Both ```mBART``` and ```IndicTrans``` has a GPU support but IndicTrans lacks documentation on managing devices.
@@ -9,34 +8,34 @@
 - ```IndicTrans``` translation is close to the original english text.
 ## SCOREBOARD
 ### IndicTrans
-| Language  |chrf score |sacrebleu score |
-|:-----------|--------:|--------:|
-| as         | 65.3188 | 38.9631 |
-| bn         | 69.1266 | 41.6014 |
-| gu         | 71.1677 | 47.251  |
-| hi         | 66.3802 | 41.6037 |
-| kn         | 68.6525 | 43.8781 |
-| ml         | 69.1734 | 42.4443 |
-| mr         | 65.5224 | 42.2722 |
-| or         | 67.9335 | 40.9525 |
-| pa         | 70.3138 | 47.2118 |
-| ta         | 65.5078 | 37.8018 |
-| te         | 72.2556 | 49.5169 |
+| language   |chrf score |   sacrebleu score |
+|:-----------|--------:|------------------:|
+| as         | 64.2577 |           37.4161 |
+| bn         | 69.0357 |           42.8951 |
+| gu         | 69.0042 |           43.7284 |
+| hi         | 64.891  |           38.9535 |
+| kn         | 66.5642 |           39.6866 |
+| ml         | 68.2518 |           42.4296 |
+| mr         | 67.2003 |           41.4007 |
+| or         | 67.2258 |           41.92   |
+| pa         | 68.7879 |           44.2421 |
+| ta         | 64.673  |           38.3515 |
+| te         | 70.0073 |           44.7336 |
 
 ### mBART 600M
-| Language   |chrf score |sacrebleu score |
-|:-----------|--------:|---------:|
-| as         | 39.6185 | 25.0706  |
-| bn         | 39.4657 | 21.0113  |
-| gu         | 43.4856 | 30.9619  |
-| hi         | 42.3089 | 19.1137  |
-| kn         | 46.9489 | 27.0324  |
-| ml         | 40.889  | 21.5821  |
-| mr         | 51.3283 | 30.6626  |
-| ne         | 34.4196 | 23.9503  |
-| or         | 42.9157 | 21.6487  |
-| pa         | 34.1481 | 23.0471  |
-| sd         | 16.0306 |  7.19658 |
-| ta         | 34.9638 | 24.9571  |
-| te         | 40.2921 | 33.5241  |
-| ur         | 34.7133 | 14.7694  |
+| language   |chrf score |   sacrebleu score |
+|:-----------|--------:|------------------:|
+| as         | 40.7172 |          24.9171  |
+| bn         | 46.3055 |          24.1139  |
+| gu         | 44.3759 |          31.2434  |
+| hi         | 42.7282 |          22.7422  |
+| kn         | 49.652  |          27.4945  |
+| ml         | 46.0775 |          29.1512  |
+| mr         | 47.0965 |          27.2033  |
+| ne         | 36.8627 |          29.9359  |
+| or         | 38.8597 |          19.9419  |
+| pa         | 37.8295 |          26.7644  |
+| sd         | 15.0092 |           7.20823 |
+| ta         | 34.5202 |          22.0321  |
+| te         | 42.7685 |          31.5408  |
+| ur         | 32.4221 |          17.3954  |
