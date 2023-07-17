@@ -1,7 +1,7 @@
 import pandas as pd
 import evaluate
 import os
-bleu = evaluate.load('  ')
+bleu = evaluate.load('sacrebleu')
 chrf=evaluate.load('chrf')
 def scores(path,metric):
   indic_lang=os.path.basename(path).split(".")[0]
