@@ -28,7 +28,7 @@ def hf_inference(model,tokenizer,path,dir='translated_dataset',batch_size=32):
 dir='scrape-4-translation/processed_dataset/'
 ds_path=[dir+path for path in os.listdir(dir)]
 
-new_dir='hf_translated_dataset'
+new_dir='scrape-4-translation/translated_mBART_600M'
 if not os.path.exists(new_dir):
     os.mkdir(new_dir)
 for path in ds_path:

@@ -25,8 +25,8 @@ def hf_inference(pipe,path,model='facebook/nllb-200-distilled-600M',sentences=10
 dir='scrape-4-translation/processed_dataset/'
 ds_path=[dir+path for path in os.listdir(dir)]
 
-dir='hf_translated_dataset'
-if not os.path.exists(dir):
-    os.mkdir(dir)
+new_dir='hf_translated_dataset'
+if not os.path.exists(new_dir):
+    os.mkdir(new_dir)
 for path in ds_path:
-  hf_inference(pipe,path)
+  hf_inference(model,tokenizer,path)
