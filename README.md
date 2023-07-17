@@ -1,11 +1,12 @@
 # scrape-4-translation
 - Scraped data From a multilingual website and calculated  sacrebleu and chrf scores for the Translation models.
 - ```IndicTrans``` model outperforms  on the translation of indic languages compared to ```mBART```.
-- Note that ```mBART``` model has a prefix in every translated sentence and these prefixes are not unique. Sometimes it generates gibberish text on the translation part.
 - Both ```mBART``` and ```IndicTrans``` has a GPU support but IndicTrans lacks documentation on managing devices.
 - ```IndicTrans GPU``` setup is faster than CPU setup on colab.
 - ```mBart``` supports most of the indic languages but ```IndicTrans``` only supports 11 indic languages.
 - ```IndicTrans``` translation is close to the original english text.
+- IndicTrans inference faster than mBART inference due to less parameters in ```IndicTrans```
+- Note that ```mBART``` model has a prefix in every translated sentence and these prefixes are not unique. Sometimes it generates gibberish text on the translation part.
 ## SCOREBOARD
 ### IndicTrans
 | language   |chrf score |   sacrebleu score |
